@@ -5,6 +5,7 @@ This repository contains code for a Generative Adversarial Network (GAN) designe
 
 
 ![image](https://github.com/Monish24/PaintingCreation_GAN/assets/54630644/c5c4102a-3593-44a9-ac8e-b7a1e97f15f3)
+
 Sample Monet-Style Painting 
 
 ## Prerequisites
@@ -38,6 +39,7 @@ The GAN is trained using adversarial loss, cycle consistency loss, and identity 
 ## Result
 
 ![image](https://github.com/Monish24/PaintingCreation_GAN/assets/54630644/a7097bef-c3e2-43d4-8237-ec4623d98072)
+
 Visualising Monet-esque paintings from Input photos
 
 
