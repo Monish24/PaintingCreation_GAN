@@ -3,10 +3,9 @@
 ## Introduction
 This repository contains code for a Generative Adversarial Network (GAN) designed to generate Monet-style paintings from photographs. This GAN consists of a generator model and a discriminator model that work together to create artistic images in the style of the famous painter Claude Monet.
 
+Sample Monet-Style Painting:
 
 ![image](https://github.com/Monish24/PaintingCreation_GAN/assets/54630644/c5c4102a-3593-44a9-ac8e-b7a1e97f15f3)
-
-Sample Monet-Style Painting 
 
 ## Prerequisites
 Before running the code in this repository, make sure you have the following prerequisites installed:
@@ -38,9 +37,9 @@ The GAN is trained using adversarial loss, cycle consistency loss, and identity 
 
 ## Result
 
-![image](https://github.com/Monish24/PaintingCreation_GAN/assets/54630644/a7097bef-c3e2-43d4-8237-ec4623d98072)
+Visualising Monet-esque paintings from Input photos:
 
-Visualising Monet-esque paintings from Input photos
+![image](https://github.com/Monish24/PaintingCreation_GAN/assets/54630644/a7097bef-c3e2-43d4-8237-ec4623d98072)
 
 
 ## Usage
