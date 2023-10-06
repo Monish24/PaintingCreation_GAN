@@ -31,29 +31,29 @@ print('Photo TFRecord Files:', len(PHOTO_FILENAMES))
 
 IMAGE_SIZE = [256, 256]
 
-def decode_image(image):
+def DECODE_IMG(image):
     image = tf.image.decode_jpeg(image, channels=3)
     image = (tf.cast(image, tf.float32) / 127.5) - 1
     image = tf.reshape(image, [*IMAGE_SIZE, 3])
     return image
 
-def read_tfrecord(example):
+def READ_TFRECORDS(example):
     tfrecord_format = {
         "image_name": tf.io.FixedLenFeature([], tf.string),
         "image": tf.io.FixedLenFeature([], tf.string),
         "target": tf.io.FixedLenFeature([], tf.string)
     }
     example = tf.io.parse_single_example(example, tfrecord_format)
-    image = decode_image(example['image'])
+    image = DECODE_IMG(example['image'])
     return image
 
-def load_dataset(filenames, labeled=True, ordered=False):
+def LOAD_DF(filenames, labeled=True, ordered=False):
     dataset = tf.data.TFRecordDataset(filenames)
-    dataset = dataset.map(read_tfrecord, num_parallel_calls=AUTOTUNE)
+    dataset = dataset.map(READ_TFRECORDS, num_parallel_calls=AUTOTUNE)
     return dataset
 
-monet_ds = load_dataset(MONET_FILENAMES, labeled=True)
-photo_ds = load_dataset(PHOTO_FILENAMES, labeled=True)
+monet_ds = LOAD_DF(MONET_FILENAMES, labeled=True)
+photo_ds = LOAD_DF(PHOTO_FILENAMES, labeled=True)
 
 example_monet = next(iter(monet_ds))
 example_photo = next(iter(photo_ds))
